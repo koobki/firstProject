@@ -20,5 +20,9 @@ public class DefaultService {
 	public UserInfo getUserInfo(Long userNo) {
 		return defaultMapper.selectUserInfo(userNo);
 	}
+	
+	public void addUserInfo(UserInfo userInfo) {
+		 defaultMapper.addUserInfo(userInfo);
+	}
 
 }
