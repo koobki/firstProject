@@ -24,8 +24,31 @@ $(document).ready(function(){
 	    });
 	
 	});
+	
+	
+	$("#btnInsert").click(function(){
+	    $.ajax({
+	        url : '/user/add?userNo=' + $("#userNo").val()
+	        		+ '&userNm=' + $("#userNm").val()
+	        		+ '&userBirthDt=' + $("#userBirthDt").val(),
+	        method : 'post',
+	        success : function(data) {
+	 			alert("회원등록 성공.");
+	        },
+	        complete : function(data) {
+	            console.log(data.responseText);
+	        }
+	    });
+	
+	});
 
 });
+
+
+
+
+
+
 </script>
 </head>
 <body>
@@ -34,6 +57,7 @@ $(document).ready(function(){
 <div id ='content' >
 <div id=search>
 회원번호 : <input id="schUserNo" type="text"><input id="btnSearch" type="button" value="조회">
+<input id="btnInsert" type="button" value="등록">
 </div>
 <div style="margin-top:10px">
 	<table style="border:1px solid">

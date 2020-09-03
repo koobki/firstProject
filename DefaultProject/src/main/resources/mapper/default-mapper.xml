@@ -16,6 +16,17 @@
           from sy_user
          where user_no = #{userNo}
     </select>
+    
+    
+     <insert id="addUserInfo" parameterType="edu.sungil.foods.web.domain.dto.UserInfo">
+       insert into mainDb.sy_user()
+       values(
+       #{userNo},
+       #{userNm},
+       date_format(#{userBirthDt},'%Y-%m-%d')
+       )
+    </insert>
+
 
   
 </mapper> 
