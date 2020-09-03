@@ -29,4 +29,16 @@ public class DefaultController {
 	public ResponseEntity<UserInfo> getUserInfo(@RequestParam(value = "userNo", required = true)Long userNo) {
 		return new ResponseEntity<UserInfo>(defaultService.getUserInfo(userNo), HttpStatus.OK);
 	}
+	
+	@RequestMapping(value="/user/add", method = RequestMethod.POST)
+	@ResponseBody
+	public void addUserInfo(@RequestParam(value = "userNo", required = true)Long userNo,
+			@RequestParam(value = "userNm", required = true)String userNm,
+			@RequestParam(value = "userBirthDt", required = true)String userBirthDt) {
+		UserInfo userInfo = new UserInfo();
+		userInfo.setUserNo(userNo);
+		userInfo.setUserNm(userNm);
+		userInfo.setUserBirthDt(userBirthDt);
+		defaultService.addUserInfo(userInfo);
+	}
 }
