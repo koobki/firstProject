@@ -39,3 +39,21 @@
   **10일차(9/24)**  
       - 예비  
 
+
+
+
+create table mainDb.sy_user
+(
+    user_no int primary key,
+    user_nm varchar(50),
+    user_birth_dt datetime
+);
+
+select * from mainDb.sy_user;
+
+insert into mainDb.sy_user(user_no, user_nm, user_birth_dt)
+values(
+    1, '홍길동', date_format('1990-10-12','%Y-%m-%d')
+);
+
+commit;
