@@ -1,6 +1,8 @@
 package edu.sungil.foods.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.servlet.config.annotation.ViewControllerRegistration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -11,6 +13,10 @@ public class WebConfig implements WebMvcConfigurer {
 	 */
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("forward:/index.jsp");
+
+        ViewControllerRegistration r = registry.addViewController("admin/");
+        r.setViewName("admin/orderList");
+        //setting status code
+        r.setStatusCode(HttpStatus.GONE);
 	}
 }
