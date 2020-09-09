@@ -42,40 +42,40 @@
 
 
 
-create table mainDb.sy_user
-(
-    user_no int primary key,
-    user_nm varchar(50),
-    user_birth_dt datetime
-);
+create table mainDb.sy_user   
+(   
+    user_no int primary key,   
+    user_nm varchar(50),   
+    user_birth_dt datetime   
+);   
 
-create table mainDb.sy_grade
-(
-    user_no int ,
-    subject_nm varchar(50),
-    score int,
-    PRIMARY KEY( user_no,subject_nm )
-);
-truncate table mainDb.sy_user;
-insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 1, '홍길동', date_format('1992-10-01','%Y-%m-%d'));
-insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 2, '정국', date_format('1995-09-20','%Y-%m-%d'));
-insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 3, '제이홉', date_format('1993-04-11','%Y-%m-%d'));
-insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 4, '슈가', date_format('1989-02-20','%Y-%m-%d'));
-insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 5, '지민', date_format('1997-11-30','%Y-%m-%d'));
+create table mainDb.sy_grade   
+(   
+    user_no int ,   
+    subject_nm varchar(50),   
+    score int,   
+    PRIMARY KEY( user_no,subject_nm )   
+);   
+truncate table mainDb.sy_user;   
+insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 1, '홍길동', date_format('1992-10-01','%Y-%m-%d'));   
+insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 2, '정국', date_format('1995-09-20','%Y-%m-%d'));   
+insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 3, '제이홉', date_format('1993-04-11','%Y-%m-%d'));   
+insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 4, '슈가', date_format('1989-02-20','%Y-%m-%d'));   
+insert into mainDb.sy_user(user_no, user_nm, user_birth_dt) values ( 5, '지민', date_format('1997-11-30','%Y-%m-%d'));   
 
-truncate table mainDb.sy_grade;
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 1,'kor', 77);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 1,'eng', 80);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 1,'math', 100);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 2,'kor', 100);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 2,'eng', 97);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 2,'math', 98);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 3,'kor', 68);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 3,'eng', 82);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 3,'math', 95);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 4,'kor', 75);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 4,'eng', 80);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 4,'math', 84);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 5,'kor', 88);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 5,'eng', 90);
-insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 5,'math', 92);
+truncate table mainDb.sy_grade;   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 1,'kor', 77);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 1,'eng', 80);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 1,'math', 100);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 2,'kor', 100);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 2,'eng', 97);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 2,'math', 98);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 3,'kor', 68);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 3,'eng', 82);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 3,'math', 95);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 4,'kor', 75);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 4,'eng', 80);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 4,'math', 84);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 5,'kor', 88);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 5,'eng', 90);   
+insert into mainDb.sy_grade(user_no, subject_nm, score) values ( 5,'math', 92);   
