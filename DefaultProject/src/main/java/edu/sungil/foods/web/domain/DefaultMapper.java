@@ -9,5 +9,8 @@ public interface DefaultMapper {
 	String selectName();
 
 	UserInfo selectUserInfo(Long userNo);
+	
 	void  addUserInfo(UserInfo userInfo);
+	
+	void  deleteUserInfo(UserInfo userInfo);
 }

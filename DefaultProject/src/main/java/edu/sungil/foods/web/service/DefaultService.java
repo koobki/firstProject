@@ -24,5 +24,9 @@ public class DefaultService {
 	public void addUserInfo(UserInfo userInfo) {
 		defaultMapper.addUserInfo(userInfo);
 	}
+	
+	public void deleteUserInfo(UserInfo userInfo) {
+		defaultMapper.deleteUserInfo(userInfo);
+	}
 
 }

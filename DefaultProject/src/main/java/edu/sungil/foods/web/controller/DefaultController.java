@@ -39,6 +39,17 @@ public class DefaultController {
 		userInfo.setUserNo(userNo);
 		userInfo.setUserNm(userNm);
 		userInfo.setUserBirthDt(userBirthDt);
+		
 		defaultService.addUserInfo(userInfo);
 	}
+	
+	@RequestMapping(value="/user/del", method = RequestMethod.POST)
+	@ResponseBody
+	public void deleteUserInfo(@RequestParam(value = "userNo", required = true)Long userNo) {
+		UserInfo userInfo = new UserInfo();
+		userInfo.setUserNo(userNo);
+		
+		defaultService.deleteUserInfo(userInfo);
+	}
+	
 }
