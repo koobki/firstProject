@@ -11,4 +11,5 @@ public interface DefaultMapper {
 	UserInfo selectUserInfo(Long userNo);
 	
 	void addUserInfo(UserInfo userInfo);
+	void delUserInfo(UserInfo userInfo);
 }

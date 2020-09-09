@@ -41,8 +41,26 @@ $(document).ready(function(){
 	    });
 	
 	});
+	
+	
+	$("#btnDelete").click(function(){
+	    $.ajax({
+	        url : '/user/del?userNo=' + $("#schUserNo").val(),
+	        method : 'post',
+	        success : function(data) {
+	        	alert("회원 삭제 완료")
+	        },
+	        complete : function(data) {
+	            console.log(data.responseText);
+	        }
+	    });
+	
+	});
+	
+	
 
 });
+
 
 
 
@@ -58,6 +76,7 @@ $(document).ready(function(){
 <div id=search>
 회원번호 : <input id="schUserNo" type="text"><input id="btnSearch" type="button" value="조회">
 <input id="btnInsert" type="button" value="등록">
+<input id="btnDelete" type="button" value="삭제">
 </div>
 <div style="margin-top:10px">
 	<table style="border:1px solid">
@@ -75,9 +94,9 @@ $(document).ready(function(){
 	    </thead>
 	    <tbody>
 	        <tr>
-	            <td><input type="text" id="userNo"></label></td>
-	            <td><input type="text" id="userNm"></label></td>
-	            <td><input type="text" id="userBirthDt"></label></td>
+	            <td><input type="text" id="userNo"></td>
+	            <td><input type="text" id="userNm"></td>
+	            <td><input type="text" id="userBirthDt"></td>
 	        </tr>
 	    </tbody>
 	</table>

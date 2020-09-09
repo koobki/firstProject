@@ -26,6 +26,10 @@
        date_format(#{userBirthDt},'%Y-%m-%d')
        )
     </insert>
+    
+    <delete id="delUserInfo" parameterType="edu.sungil.foods.web.domain.dto.UserInfo">
+       delete from mainDb.sy_user where user_no = #{userNo}
+    </delete>
 
 
   
