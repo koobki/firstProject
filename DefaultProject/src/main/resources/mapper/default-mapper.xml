@@ -6,7 +6,9 @@
 
     <select id="selectName" resultType="String">
         SELECT 'name' as name
-          from dual
+          from dual  
+          
+          
     </select>
     
     <select id="selectUserInfo" parameterType="Long" resultType="edu.sungil.foods.web.domain.dto.UserInfo">
