@@ -15,6 +15,9 @@
               ,DATE_FORMAT(user_birth_dt,'%Y/%m/%d') user_birth_dt
           from sy_user
          where user_no = #{userNo}
+
+
+
     </select>
 
   

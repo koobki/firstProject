@@ -9,7 +9,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DefaultProjectApplication {
 
 	public static void main(String[] args) {
+		
+		
 		SpringApplication.run(DefaultProjectApplication.class, args);
+		
+		
 	}
 
 }
